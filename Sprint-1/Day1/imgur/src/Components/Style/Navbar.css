@@ -1,0 +1,149 @@
+.logo,.search,.login{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.search input{
+    width: 350px;
+    border: none;
+}
+
+.search{
+    width: 380px;
+    margin: auto;
+    align-items: center;
+}
+
+.searchContainer{
+    width: 400px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 40px;
+}
+
+.navContainer{
+    display:flex; 
+    justify-content:space-between;
+    width:95%;
+    margin:auto;
+    margin-top:10px;
+    position: fixed;
+}
+
+.green{
+    background-color: rgb(79, 183, 101);
+    border: none;
+    padding: 2px;
+    font-size: 17px;
+    width: 100px;
+    color: white;
+    border-radius: 5px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.blue{
+    background-color: rgb(47, 57, 116);
+    border: none;
+    padding: 2px;
+    font-size: 17px;
+    width: 120px;
+    color: white;
+    border-radius: 5px;
+    height: 40px;
+    cursor: pointer;
+}
+
+img{
+    cursor: pointer;
+}
+
+.signin{
+    font-size: 17px;
+    width: 60px;
+    color: rgb(139, 80, 80);
+    border-radius: 5px;
+    margin-top: 8px;
+    height: 40px;
+    cursor: pointer; 
+}
+
+.logo img{
+    border-radius: 25px;
+    height: 40px
+}
+
+.gridContainer{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 1px;
+    width: 90%;
+    margin: auto;
+}
+
+.gridContainer>div>img{
+    width: 120px;
+    height: 150px;
+}
+
+.collapase{
+    display: flex;
+    justify-content: space-between;
+    width: 88%;
+    margin: auto;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.5rm;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.show{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    width: 90%;
+    margin: auto;
+    gap: 2px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+.hide{
+    display: none;
+}
+
+.show>div>img{
+    width: 120px;
+    height: 150px;
+}
+
+.collapase>button{
+border: none;
+font-size: 18px;
+font-weight: 500;
+background-color: aliceblue;
+cursor: pointer;
+}
+
+.collapase>div>button>img{
+    height: 30px;
+    width: 30px;
+}
+
+.showImages{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 2px;
+    width: 85%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.showImages>div>img{
+    height: 350px;
+    width: 300px;
+}

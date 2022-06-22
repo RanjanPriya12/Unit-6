@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+  color: antiquewhite;
+  margin-top: 0px;
+}
+*{
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(12, 12, 12);
+}
+

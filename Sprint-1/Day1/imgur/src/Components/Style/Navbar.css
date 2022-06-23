@@ -7,6 +7,7 @@
 .search input{
     width: 350px;
     border: none;
+    text-decoration: none;
 }
 
 .search{
@@ -27,8 +28,9 @@
     justify-content:space-between;
     width:95%;
     margin:auto;
-    margin-top:10px;
+    margin-top:5px;
     position: fixed;
+    top:0px;
 }
 
 .green{
@@ -58,7 +60,13 @@
 img{
     cursor: pointer;
 }
-
+.search{
+    width: 350px;
+}
+.search input{
+   
+    color: aliceblue;
+}
 .signin{
     font-size: 17px;
     width: 60px;
@@ -67,6 +75,7 @@ img{
     margin-top: 8px;
     height: 40px;
     cursor: pointer; 
+    text-decoration: none;
 }
 
 .logo img{
@@ -146,4 +155,49 @@ cursor: pointer;
 .showImages>div>img{
     height: 350px;
     width: 300px;
+}
+
+
+/*====================Bottom Navbar styel================*/
+
+.bottomNavbar{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: auto;
+    color: white;
+    position: fixed;
+  bottom: 0;
+  box-shadow: rgba(32, 32, 33, 0.25) 0px 30px 60px -12px inset, rgba(27, 26, 26, 0.9) 0px 18px 36px -18px inset;
+  height: 40px;
+}
+.link{
+    color: white;
+    text-decoration: none;
+}
+
+.bottomContent{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 5px;
+}
+
+
+/*========================Search Page Style=====================*/
+
+.searchContainer{
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+   
+}
+
+.searchContainer>div>img{
+    width: 300px;
+    height: 300px;
 }

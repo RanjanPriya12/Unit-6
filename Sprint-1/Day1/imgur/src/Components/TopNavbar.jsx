@@ -1,22 +1,55 @@
-import React from 'react';
+import React, { useState,useCallback } from 'react';
+import { Link } from 'react-router-dom';
 import './Style/Navbar.css';
+import {useNavigate} from 'react-router-dom';
 
 
 const TopNavbar = () => {
-   
+   const navigate=useNavigate();
+    const [suggestions, setSuggestions] = useState("");
 
+    const debounce = (func) => {
+      let timer;
+      return function (...args) {
+        const context = this;
+        if (timer) clearTimeout(timer);
+        timer = setTimeout(() => {
+          timer = null;
+          func.apply(context, args);
+        }, 500);
+      };
+    };
+
+    const handler = (event) => {
+        if(event.key==='Enter'){
+navigate("/search");
+        }
+    };
+    
+    const handleChange =async (value) => {
+      const res=await fetch(`https://api.unsplash.com/search/?query=${value}photos/&client_id=CiUHdv8t1CZ0RdkGWvepkPXZAFaWvFZNgM7IyR5o0ME`);
+      const data=await res.json();
+        setSuggestions(data);
+        localStorage.setItem('searchItems',JSON.stringify(data));
+        console.log(data);
+    };
+
+const display = useCallback(debounce(handleChange), []);
    
   return (
 <div className="navContainer">
         <div className="logo">
-            <div><img src="https://images5.alphacoders.com/415/415275.jpg" alt="imgur" /></div>
-            <button className='green'> New Post</button>
+            <Link to='/'><div><img src="https://images5.alphacoders.com/415/415275.jpg" alt="imgur" /></div></Link>
+            <Link to='/post'><button className='green'> New Post</button></Link>
+            
         </div>
         <div className='searchContainer'>
+           
             <div className='search' >
-                <input type="text"  placeholder='Images, #tags, @users oh my!...'/>
+                <input type="text" onChange={(e) => display(e.target.value)} onKeyPress={(e) => handler(e)} placeholder='Images, #tags, @users oh my!...'/>
                 <div><img style={{width:"40px", height:"30px"}} src="https://th.bing.com/th/id/R.27fd7bcbe89bcf85757a4960e2e802ef?rik=tzjKihQb7nZyIA&riu=http%3a%2f%2fwww.clker.com%2fcliparts%2fJ%2fQ%2fb%2fm%2fQ%2f3%2fsearch-without-text-hi.png&ehk=9eMoP62OuVqLaZXsB0rTrqZSuz9%2fwvIdeMCmaXpzIBY%3d&risl=&pid=ImgRaw&r=0" alt="search" /></div>
             </div>
+            
         </div>
         <div className="login">
             <div>
@@ -25,11 +58,17 @@ const TopNavbar = () => {
             <div>
                 <button className='blue'>Go Add-Free</button>
             </div>
+            <Link className='link' to='/login'>
             <div className='signin'>Sign In</div>
+            </Link>
+            <Link to='/sign'>
             <div>
                 <button className='green'>Sign Up</button>
             </div>
+            </Link>
+            
         </div>
+        
     </div>
     
   )

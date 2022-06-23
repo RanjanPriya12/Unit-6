@@ -15,7 +15,7 @@ getPictures();
 
   const getPictures=()=>{
       axios.get('https://api.unsplash.com/photos/random?count=100&client_id=CiUHdv8t1CZ0RdkGWvepkPXZAFaWvFZNgM7IyR5o0ME').then(res=>{
-          console.log(res.data);
+          // console.log(res.data);
           setPictures(res.data);
       })
   }
@@ -23,7 +23,7 @@ getPictures();
 
   const hideShowHandle=()=>{
     setShow(!show);
-    console.log(show)
+    // console.log(show)
 }
 
 const displayOriginal=()=>{

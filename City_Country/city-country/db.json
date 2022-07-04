@@ -1,0 +1,52 @@
+{
+  "city": [
+    {
+      "country": "India",
+      "city": "Delhi",
+      "population": "150000",
+      "id": 1
+    },
+    {
+      "country": "India",
+      "city": "Noida",
+      "population": "14000",
+      "id": 2
+    },
+    {
+      "country": "India",
+      "city": "Banaras",
+      "population": "10000",
+      "id": 3
+    }
+  ],
+  "countryData": [
+    {
+      "id": 1,
+      "country": "Italy"
+    },
+    {
+      "country": "China",
+      "id": 2
+    },
+    {
+      "country": "India",
+      "id": 3
+    },
+    {
+      "country": "Brazil",
+      "id": 4
+    },
+    {
+      "country": "France",
+      "id": 5
+    },
+    {
+      "country": "Pakistan",
+      "id": 6
+    },
+    {
+      "country": "Jerman",
+      "id": 7
+    }
+  ]
+}

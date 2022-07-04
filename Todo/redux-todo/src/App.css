@@ -1,0 +1,8 @@
+@import '~antd/dist/antd.css';
+
+.App{
+  display: flex;
+  width:60%;
+  max-width: 400px;
+  margin: auto;
+}

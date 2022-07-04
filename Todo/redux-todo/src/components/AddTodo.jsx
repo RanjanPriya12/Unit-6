@@ -4,6 +4,7 @@ import { useState } from "react";
 
 import axios from "axios";
 
+
 function AddTodo({ getData }) {
   const [text, setText] = useState("");
 
